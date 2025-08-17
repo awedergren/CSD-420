@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run CardDisplayApp (JavaFX)",
+			"type": "shell",
+			"command": "java --module-path \"C:\\Program Files\\JavaFX\\javafx-sdk-24.0.2\\lib\" --add-modules javafx.controls,javafx.fxml --enable-native-access=javafx.graphics CardDisplayApp",
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
