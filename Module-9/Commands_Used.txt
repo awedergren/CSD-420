@@ -1,0 +1,39 @@
+C:\>cd C:\Program Files\MySQL\MySQL Server 5.7\bin
+
+C:\Program Files\MySQL\MySQL Server 5.7\bin>mysql -u root -p 
+
+SELECT User, Host FROM mysql.user; 
+
+// if needed
+DROP USER student1@'localhost';
+// DROP USER student33;
+
+CREATE USER student1@'localhost' IDENTIFIED BY 'pass';
+// CREATE USER student33 IDENTIFIED BY 'pass';
+
+GRANT ALL PRIVILEGES ON * . * TO student1@'localhost';
+// GRANT ALL PRIVILEGES ON * . * TO student33;
+
+EXIT;
+
+C:\Program Files\MySQL\MySQL Server 5.7\bin>mysql -u student33 -p
+Enter password: ****
+
+SELECT CURRENT_USER();
+
+show databases;
+
+DROP DATABASE databasedb;
+
+CREATE DATABASE databasedb;
+
+use databasedb;
+
+show tables;
+
+/*
+CREATE TABLE address33(ID int PRIMARY KEY,LASTNAME varchar(40), FIRSTNAME varchar(40), STREET varchar(40), CITY varchar(40), STATE varchar(40), ZIP varchar(40));
+INSERT INTO address33 VALUES(24,'Lou','Woods','1919 Bluewing Circle','Bellevue','NE','68123');
+INSERT INTO address33 VALUES(25,'Lou','Woods','1919 Bluewing Circle','Bellevue','NE','68123');
+INSERT INTO address33 VALUES(26,'Lou','Woods','1919 Bluewing Circle','Bellevue','NE','68123');
+*/
