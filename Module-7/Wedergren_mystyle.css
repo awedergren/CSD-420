@@ -1,0 +1,24 @@
+/* Amanda Wedergren
+/* September 17, 2025
+/* Module 7.2 Assignment
+
+/* Class for white fill and black stroke */
+.white-black {
+    -fx-fill: white;
+    -fx-stroke: black;
+    -fx-stroke-width: 3;
+}
+
+/* ID for red fill and black stroke */
+#red-fill {
+    -fx-fill: red;
+    -fx-stroke: black;
+    -fx-stroke-width: 3;
+}
+
+/* ID for green fill and black stroke */
+#green-fill {
+    -fx-fill: green;
+    -fx-stroke: black;
+    -fx-stroke-width: 3;
+}
