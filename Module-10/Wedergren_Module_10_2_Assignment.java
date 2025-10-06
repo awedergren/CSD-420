@@ -179,11 +179,12 @@ public class Wedergren_Module_10_2_Assignment {
             ps.setInt(1, id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    // Read columns by name to avoid ordering mistakes
+                    // Read columns by the names detected at runtime to support
+                    // either snake_case or compact column names.
                     int rid = rs.getInt("id");
-                    String first = rs.getString("first_name");
-                    String last = rs.getString("last_name");
-                    String team = rs.getString("favorite_team");
+                    String first = rs.getString(colFirstName);
+                    String last = rs.getString(colLastName);
+                    String team = rs.getString(colTeam);
                     return new Fan(rid, first, last, team);
                 } else {
                     return null; // not found

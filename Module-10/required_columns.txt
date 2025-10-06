@@ -1,0 +1,30 @@
+Required columns for Wedergren_Module_10_2_Assignment.java
+
+The program requires the `fans` table to contain the following columns (either the snake_case names or the compact names are accepted):
+
+- id               INT PRIMARY KEY
+- first_name OR firstname      VARCHAR (program accepts either `first_name` or `firstname`)
+- last_name OR lastname        VARCHAR (program accepts either `last_name` or `lastname`)
+- favorite_team OR favoriteteam VARCHAR (program accepts either `favorite_team` or `favoriteteam`)
+
+Notes:
+- The program detects which column names exist at runtime and builds SQL accordingly.
+- Types should be character types for the name/team columns (VARCHAR recommended).
+- Example CREATE TABLE snippet (one of two naming styles):
+
+-- snake_case style
+CREATE TABLE fans (
+  id INT PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  favorite_team VARCHAR(100)
+);
+
+-- compact style
+CREATE TABLE fans (
+  id INT PRIMARY KEY,
+  firstname VARCHAR(100),
+  lastname VARCHAR(100),
+  favoriteteam VARCHAR(100)
+);
+
